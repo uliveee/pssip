@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+
+@font-face {
+    font-family: "RexBoldInline";
+    src: url("../fonts/RexBoldInline/RexBoldInline.eot");
+    src: url("../fonts/RexBoldInline/RexBoldInline.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/RexBoldInline/RexBoldInline.woff") format("woff"),
+        url("../fonts/RexBoldInline/RexBoldInline.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RexLight";
+    src: url("../fonts/RexLight/RexLight.eot");
+    src: url("../fonts/RexLight/RexLight.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/RexLight/RexLight.woff") format("woff"),
+        url("../fonts/RexLight/RexLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "RexBold";
+    src: url("../fonts/RexBold/RexBold.eot");
+    src: url("../fonts/RexBold/RexBold.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/RexBold/RexBold.woff") format("woff"),
+        url("../fonts/RexBold/RexBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #130b0b;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #eff5f3;
+    font-family: "RexBoldInline";
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #f9fafa;
+}
+
+/* Стили для логотипа */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Стили для меню */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0px 0px 10px 0px #222629;
+    position: sticky;
+    width: 100%;
+    background: #a8a9aa;
+    height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 12;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 24px;
+    margin-bottom: 8px;
+    font-size: 19.2px;
+    text-transform: uppercase;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    transition: color 0.2s ease-in-out;
+}
+
+.menu-items a:hover {
+    color: #11d68a;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Стили галерее */
+
+.gallery {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin: 10px;
+    max-width: 500px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Стили для общей информации */
+.info {
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url("../images/back.jpg");
+    background-color: #222629;
+    padding: 48px 16px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info .info-title {
+    font-family: "RexBoldInline";
+    font-size: 40px;
+}
+
+.info .info-text {
+    font-size: 20px;
+}
+
+/* Стили для блоков с товаром */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.product {
+    background-color: #474B4F;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #d41f07;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "RexBold";
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.product p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Стили для блока с картой */
+.map {
+    background-color: #222629;
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map h3 {
+    font-size: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* Стили для видео */
+.section-video {
+    max-width: 100%;
+    width: 1000px;
+    margin: 40px auto;
+    background-color: #5a80a7;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 1px solid #61892F;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-video h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-video video {
+    max-width: 100%;
+    width: 1000px;
+    height: auto;
+}
+
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: #1d4057;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    color: #9bacb8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    /* здесь указываем 3 колонки шириной по 1fr каждая */
+    justify-items: left;
+    /* центрируем элементы по горизонтали */
+    align-items: flex-start;
+    /* центрируем элементы по вертикали */
+    /* расстояние между элементами */
+    margin-bottom: 10px;
+}
+
+.bi-github {
+    width: 35px;
+    transition: .2s;
+}
+
+.bi-facebook {
+    width: 35px;
+    transition: .2s;
+}
+
+.bi-instagram {
+    width: 35px;
+    transition: .2s;
+}
+
+.bi-twitter {
+    width: 35px;
+    transition: .2s;
+}
+
+.bi-github:hover {
+    color: #fff;
+}
+
+.bi-facebook:hover {
+    color: #3b5998;
+}
+
+.bi-instagram:hover {
+    color: #c32aa3;
+}
+
+.bi-twitter:hover {
+    color: #1da1f2;
+}
+
+@media all and (max-width: 768px) {
+    .logo {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    /* Стили меню для маленьких экранов */
+    .navbar {
+        opacity: 1;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #61892F;
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #222629;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #222629;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 24px;
+        font-size: 20.8px;
+        font-weight: 500;
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(35deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
+
+    /* Стили для блоков с товаром на маленьких экранах */
+    .products {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .map {
+        font-size: 19.2px;
+    }
+
+    footer .container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+    }
+}

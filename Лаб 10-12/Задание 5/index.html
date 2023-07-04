@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Задание 5</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <p id="s1Length"></p>
+    <p id="isReplace"></p>
+    <p id="ninthChar"></p>
+    <p id="asciiCode"></p>
+
+    <script>
+        window.onload = function () {
+            var s1 = "Я люблю Беларусь";
+            var s2 = "Я учусь в Политехническом колледже";
+
+            document.getElementById('s1').innerHTML = s1;
+            document.getElementById('s2').innerHTML = s2;
+
+            // Определение длины строки s1
+            var s1Length = s1.length;
+            document.getElementById('s1Length').innerHTML = "Длина строки s1: " + s1Length;
+
+            // Заменить с строке s2 все встречающиеся буквы "о" на "а"
+            s2 = s2.replace(/о/g, "а");
+            document.getElementById('isReplace').innerHTML = s2;
+
+            // Выделение 10-го символа в строке s1 и определение ASCII кода этого символа
+            var ninthChar = s1.charAt(10);
+            var asciiCode = ninthChar.charCodeAt(0);
+            document.getElementById('ninthChar').innerHTML = "10-й символ в строке s1: " + ninthChar;
+            document.getElementById('asciiCode').innerHTML = "ASCII код 10-го символа: " + asciiCode;
+        };
+    </script>
+</body>
+
+</html>

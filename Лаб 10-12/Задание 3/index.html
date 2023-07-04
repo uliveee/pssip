@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Задание 3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <p id="start"></p>
+    <p id="final"></p>
+    <script>
+        window.onload = function () {
+            var array = [2, 4, 8, 12, 16, 20, 24, 28]; // Создаем массив из 8 целых элементов
+            var count = 0; // Переменная для подсчета количества элементов, кратных числу 4
+            document.getElementById("start").innerHTML = "Начальный: " + array;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 4 === 0) {
+                    count++; // Увеличиваем счетчик, если элемент массива кратен числу 4
+                }
+            }
+            document.getElementById("final").innerHTML = "Количество элементов массива, кратных числу 4: " + count;
+        };
+    </script>
+</body>
+
+</html>

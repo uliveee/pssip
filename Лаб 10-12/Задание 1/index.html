@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Задание 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript">
+        function showTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var seconds = now.getSeconds();
+
+            var message = "Текущее время: " + seconds + " секунд " + hours + " часов";
+
+            alert(message);
+        };
+    </script>
+</head>
+
+<body>
+    <button onclick="showTime()">Показать год</button>
+</body>
+
+</html>
